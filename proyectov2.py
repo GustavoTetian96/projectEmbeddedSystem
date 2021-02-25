@@ -11,10 +11,10 @@ temperatura=0
 
 def insertVariblesIntoTable(nombre,apellido,temp):
     try:
-        connection = mysql.connector.connect(host='localhost',
+        connection = mysql.connector.connect(host='localhost', #se puede poner user de clever cloud
                                              database='ciudadelaDB',
-                                             user='gustavoCastillo',
-                                             password='123')
+                                             user='user',
+                                             password='***')
         cursor = connection.cursor()
         mySql_insert_query = """INSERT INTO personas (Nombre,Apellido,Temperatura) 
                                 VALUES (%s, %s, %s) """
