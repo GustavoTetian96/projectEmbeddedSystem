@@ -33,7 +33,7 @@ class RequestHandler_httpd(BaseHTTPRequestHandler):
     
 
 
-server_address_httpd = ('192.168.1.10',8080)
+server_address_httpd = ('192.168.*.*',8080)
 httpd = HTTPServer(server_address_httpd, RequestHandler_httpd)
 print('conectando a servidor')
 httpd.serve_forever()
